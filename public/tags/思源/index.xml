@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>思源 on 🌻</title>
+    <link>https://wangyunzi.com/tags/%E6%80%9D%E6%BA%90/</link>
+    <description>Recent content in 思源 on 🌻</description>
+    <image>
+      <url>https://wangyunzi.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://wangyunzi.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 16 Sep 2022 21:14:36 +0800</lastBuildDate><atom:link href="https://wangyunzi.com/tags/%E6%80%9D%E6%BA%90/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>我与思源的初遇</title>
+      <link>https://wangyunzi.com/life/2022-09-16/</link>
+      <pubDate>Fri, 16 Sep 2022 21:14:36 +0800</pubDate>
+      
+      <guid>https://wangyunzi.com/life/2022-09-16/</guid>
+      <description>从昨天晚上到今天晚上，对于思源笔记的使用已经能够比较顺畅了。仔细算起来我折腾obsidian的时间大概有一年左右，在这一年的时间内，几乎大半</description>
+    </item>
+    
+  </channel>
+</rss>

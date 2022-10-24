@@ -1,0 +1,13 @@
+dot {
+    position: relative
+
+;
+}
+  
+dot:after {
+    position: absolute;
+    top: 0.65em;
+    left: 0;
+    width: 100%;
+    content: "・";
+}

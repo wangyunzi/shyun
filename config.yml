@@ -1,0 +1,425 @@
+baseURL: https://wangyunzi.com
+defaultContentLanguage: "zh" # en-us
+languageCode: zh-cn
+hasCJKLanguage: true # 设定网站有 CJK 字符（中日韩统一表意文字）
+title: 🌻
+paginate: 10
+theme: "PaperMod"
+
+enableInlineShortcodes: true
+enableEmoji: true # 允许使用 Emoji 表情，建议 true
+enableRobotsTXT: true # 允许爬虫抓取到搜索引擎，建议 true
+
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+googleAnalytics: G-DJCXPEYLMM
+
+minify:
+    disableXML: true
+    minifyOutput: true
+
+params:
+    env: production # to enable google analytics, opengraph, twitter-cards and schema.
+    ##title: 长街短梦
+    description: "爱自由"
+    keywords: [王云子, Technology, life, 长街短梦, study]
+    author: "王云子"
+    # author: ["Me", "You"] # multiple authors
+    images: ["<link or path of image for opengraph, twitter-cards>"]
+    DateFormat: "January 2, 2006"
+    beian: "浙ICP备2022025879号"
+    defaultTheme: light # dark, light
+    disableThemeToggle: false
+    disablePWA: false
+    disableBuSuanZi: false
+    
+    ShowCommentsCount: true
+    ShowReadingTime: true
+    ShowWordNumber: true
+    ShowShareButtons: true
+    ShowPostNavLinks: true
+    ShowBreadCrumbs: true
+    ShowCodeCopyButtons: true
+    ShowFullTextinRSS: false
+    ShowAllPagesInArchive: true
+    ShowWormhole: true
+    ShowReprinted: true
+    disableSpecial1stPost: false
+    disableScrollToTop: false
+    disableAnchoredHeadings: false
+    disableAPlayer: false
+    comments: true
+    hidemeta: false
+    hideSummary: false
+    showtoc: true
+    tocopen: true
+
+    assets:
+        # disableHLJS: true # to disable highlight.js
+        # disableFingerprinting: true
+        favicon: "favicon.ico"
+        # favicon16x16: "<link / abs url>"
+        # favicon32x32: "<link / abs url>"
+        apple_touch_icon: "apple-touch-icon.png"
+        safari_pinned_tab: "apple-touch-icon.png"
+
+    # label:
+        # text: "长街短梦"
+        # icon: "🏠"
+        # iconHeight: 35
+
+    # profile-mode
+    profileMode:
+        enabled: true  # needs to be explicitly set
+        title: 长街短梦    ## 🌱 煎茶
+        subtitle: "爱自由"
+        imageUrl: "https://blog.wangyunzi.com/avatar.png"
+        imageWidth: 120
+        imageHeight: 120
+        # imageTitle: wangyunzi
+        buttons:
+            # - name: 🌈生活
+            #   url: /life/
+            - name: ⚙️ 哔哔
+              url: /bb/
+            # - name: ⭐阅读
+            #   url: /read/
+            - name: 💡 说说
+              url: /talk/
+            - name: 🕊️相册
+              url: /photos/
+            # - name: 🗃 相册2
+            #   url: /photos/
+            # - name: 📎 资源
+            #   url: /cute/
+            # - name: 📜 旧书
+            #  url: https://blog.frytea.com
+            #- name: 🦉 Newsletter
+            #  url: https://frytea.hedwig.pub
+#            - name: 🛠 工具
+#              url: technology/app-list/
+#            - name: 📁 项目
+#              url: technology/projects/
+
+    # home-info mode
+    homeInfoParams:
+        Title: "Hi there \U0001F44B"
+        Content: Welcome to my blog
+
+    socialIcons:
+        - name: github
+          url: "https://github.com/wangyunzi"
+        - name: telegram
+          url: "https://t.me/YunziWa"
+        - name: email
+          url: "mailto:wangyunzi@aliyun.com"
+        - name: twitter
+          url:  "https://twitter.com/YunziWang"
+        - name: facebook
+          url: "https://www.facebook.com/YunziWang4"
+        - name: instagram
+          url: "https://www.instagram.com/yunziwang3"
+        #- name: QQ
+        #  url: "img/qq.png"
+        #- name: WeChat
+        #  url: "img/wechat.png"
+        #- name: bilibili
+        #  url: "https://space.bilibili.com/234461224"
+        #- name: linkedin
+        #  url: "https://www.linkedin.com/in/songtianlun/"
+        - name: rss
+          url: "/index.xml"
+
+    # analytics:
+    #     # google:
+    #     #     SiteVerificationTag: "XYZabc"
+    #     # bing:
+    #     #     SiteVerificationTag: "XYZabc"
+    #     yandex:
+    #         SiteVerificationTag: "73b1a797f62c0e98"
+    #     baidu:
+    #         SiteVerificationTag: "code-gnOrbP1RyC"
+    # baiduUnionVerify: "4c552c344295cb984c46ebe74962b067"
+    # googleAdSense: ca-pub-7296634171837358
+    # umamiCodeID: 3d947a98-2774-46b0-805f-fe2e4877a1d7
+
+    cover:
+        hidden: false # hide everywhere but not in structured data
+        hiddenInList: true # hide on list pages and home
+        hiddenInSingle: true # hide on single page
+        responsiveImages: false
+        linkFullImages: false
+
+    editPost:
+        URL: ""
+        Text: "PR" # edit text
+        appendFilePath: true # to append file path to Edit link
+
+    # for search
+    # https://fusejs.io/api/options.html
+    fuseOpts:
+        isCaseSensitive: true
+        shouldSort: true
+        location: 0
+        distance: 1000
+        threshold: 0.4
+        minMatchCharLength: 0
+        keys: ["title", "permalink", "summary", "content"]
+  
+   ### comments
+    twikoo:
+       enable: true
+       version: 1.6.7 # 填写twikoo的版本
+       region: ap-shanghai # 环境地域，默认为 ap-shanghai，如果您的环境地域不是上海，需传此参数，请看twikoo官方文档
+       id: https://www.wangyunzi.life/ # 填写个人的twikoo ID
+    
+    disqus:
+       enable: false
+       disqusShortname: wang-yun-zi
+    
+    livere:
+       enable: false
+
+    artalk:
+       enable: false
+       server: 'https://artalk.example.org'
+       site: '长街短梦'
+
+    
+    waline:
+       enable: false
+       walineServerURL: "https://www.wangyunzi.xyz/"
+       walinePlaceholder: 请填写正确的昵称和邮箱，方便接收评论回复信息哦。
+       walineAvatar: mp
+       walineMeta:
+          - nick
+          - mail
+          - link
+       walinePageSize: 10
+       walineLang: zh-CN
+       walineHighlight: true
+       walineAvatarCDN: https://cdn.v2ex.com/gravatar/
+       walineRequiredFields:
+          - nick
+          - mail
+
+
+    # valine:
+    #     enable: true
+    #     appId: PKyjbMfNhcInsgLbrng5WkJj-MdYXbMMI
+    #     appKey: D4tM5p7PSAO7cXtt6PPPe6uf
+    #     notify: true
+    #     verify: true
+    #     avatar: 王云子
+    #     placeholder: 说点什么吧...
+    #     visitor: true
+    
+    
+    algolia:
+      vars: ["title", "summary", "date", "publishdate", "expirydate", "permalink"]
+      params: ["categories", "tags"]
+      appId: "QQOZJT9I08"
+      indexName: "wangyunzi"
+      searchOnlyKey: "7c96d116a3bd2fc39c765c3f6679f678"  # Search-Only API Key
+
+
+menu:
+    main:
+        # - identifier: categories
+        #   name: 分类   # 🗂
+        #   url: /categories/
+        #   weight: "1"
+        # - identifier: tags
+        #   name: 标签 ##🏷️
+        #   url: /tags/
+        #   weight: "2"
+        # - identifier: archives
+        #   name: 归档
+        #   url: /archives/
+        #   weight: "3"
+        - identifier: posts
+          name: 随笔 ##✒️
+          url: /life/
+          weight: "4"
+        - identifier: read
+          name: 阅读 ##⚙️
+          url: /read/
+          weight: "5"
+        - identifier: about
+          name: 关于 ##🛠
+          url: /about/
+          weight: "6"
+        - identifier: search
+          name: 搜索 ##🔍
+          url: /search/
+          weight: "7"
+        - identifier: friend
+          name: 友链
+          url: /friend/
+          weight: "8"
+        - identifier: friends
+          name: 朋友圈
+          url: /friends/
+          weight: "9"
+        - identifier: movies
+          name: 电影
+          url: /movies/
+          weight: "10"
+        - identifier: books
+          name: 书籍
+          url: /books/
+          weight: "11"
+        - identifier: music
+          name: 音乐
+          url: /music/
+          weight: "12"
+        # - identifier: message
+        #   name: 留言区
+        #   url: /message/
+        #   weight: "13"
+  
+outputs:
+    home:
+        - HTML
+        - RSS
+        - JSON # is necessary
+
+sitemap:
+  changefreq: monthly
+  filename: sitemap.xml
+  priority: 0.5
+# Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
+# pygmentsUseClasses: true
+# markup:
+#     highlight:
+#         # anchorLineNos: true
+#         codeFences: true
+#         guessSyntax: true
+#         lineNos: true
+#         style: monokai
+
+#### 允许 html 渲染 start ####
+blackfriday:
+extensionsmask: ["noIntraEmphasis"]
+fractions: false
+
+markup:
+    goldmark:
+        renderer:
+            unsafe: true # HUGO 默认转义 Markdown 文件中的 HTML 代码，如需开启的话
+    highlight:
+        # anchorLineNos: true
+        codeFences: true  
+        guessSyntax: true
+        # lineNos: true
+        noClasses: true
+        tabWidth: 4
+        style: monokai
+        # codeFences：代码围栏功能，这个功能一般都要设为 true 的，不然很难看，就是干巴巴的-代码文字，没有颜色。
+        # guessSyntax：猜测语法，这个功能建议设置为 true, 如果你没有设置要显示的语言则会自动匹配。
+        # hl_Lines：高亮的行号，一般这个不设置，因为每个代码块我们可能希望让高亮的地方不一样。
+        # lineNoStart：行号从编号几开始，一般从 1 开始。
+        # lineNos：是否显示行号，我比较喜欢显示，所以我设置的为 true.
+        # lineNumbersInTable：使用表来格式化行号和代码,而不是 标签。这个属性一般设置为 true.
+        # noClasses：使用 class 标签，而不是内嵌的内联样式
+
+privacy:
+    vimeo:
+        disabled: false
+        simple: true
+
+    twitter:
+        disabled: false
+        enableDNT: true
+        simple: true
+
+    instagram:
+        disabled: false
+        simple: true
+
+    youtube:
+        disabled: false
+        privacyEnhanced: true
+
+services:
+    instagram:
+        disableInlineCSS: true
+    twitter:
+        disableInlineCSS: true
+        
+
+
+  
+# fcircle
+# see https://akilar.top/posts/8480b91c/
+fcircle:
+  enable: true #控制开关
+  apiurl: https://www.wangyunzi.top/ #api地址
+  initnumber: 20 #【可选】页面初始化展示文章数量
+  stepnumber: 10 #【可选】每次加载增加的篇数
+  css: https://npm.elemecdn.com/hexo-filter-fcircle/assets/css/butterfly.css #【可选】开发者接口，自定义css链接
+  js: https://npm.elemecdn.com/hexo-filter-fcircle/assets/js/fcircle.js #【可选】开发者接口，自定义js链接
+  fetchJS: https://npm.elemecdn.com/hexo-filter-fcircle/assets/js/fetch.js #可选】开发者接口，自定义fetchJs链接
+  path: #【可选】fcircle的路径名称。默认为 fcircle，生成的页面为 fcircle/index.html
+  front_matter: #【可选】fcircle页面的 front_matter 配置
+    title: 朋友圈
+    comments: false
+
+enableEmoji: true
+enableGitInfo: false
+taxonomies:
+  category: categories
+  tag: tags
+  slug: slug
+permalinks:
+  posts: /:slug/
+  tags: /tags/:slug/
+
+# Tidio online chat
+# see: https://www.tidiochat.com
+tidio:
+  enable: false
+  key: # Public_Key
+
+# 评论组件设置，最多支持2个显示
+  # Multiple Comment System Support
+  commentsbutton:
+    # 开启评论组件
+    # If true, will show comment component in post end.
+    enable: true   
+    # 设置默认使用的评论插件
+    # 可选值：livere | waline | utterances | artalk | giscus
+    # Choose a comment system to be displayed by default.
+    # Available values: livere | waline | utterances | artalk | giscus 
+    active: giscus
+    # 让用户自己选择使用评论插件留言
+    # 如果设置为 false，将采用 active 参数的那个插件
+    # Setting `true` means remembering the comment system selected by 
+    # the visitor, otherwise use the `active` setting comment system.
+    storage: true
+    # TODO
+    # Lazyload all comment systems.
+    # lazyload: false
+    # 设置你要显示的2个评论插件，`weight` 数字越小越靠前
+    # `name` 参数名可选值：livere | waline | utterances | artalk | giscus
+    # Modify texts or order for any naves, here are some examples.
+    nav:
+      - name: waline
+        title: Waline
+        color: "#27ae60"
+        weight: 2
+      - name: giscus
+        title: Giscus
+        color: "#886ce4"
+        weight: 1
+
+
+# 图像处理
+imaging:
+  anchor: Smart
+  bgColor: '#ffffff'
+  hint: photo
+  quality: 75
+  resampleFilter: Box

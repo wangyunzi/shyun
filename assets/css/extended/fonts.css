@@ -1,0 +1,27 @@
+@font-face {
+    font-family: "MaShanZheng-Regular";
+    src: url("/fonts/MaShanZheng-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "NeverMindHand-Regular";
+    src: url("/fonts/NeverMindHand-Regular.ttf") format("truetype");
+}
+/* @font-face {
+	font-family: OPPO-Sans-Regular;
+	font-weight: 400;
+	font-display: swap;
+	src: url(//static.mastergo.com/static/font/OPPOSans/OPPOSans-Regular.woff2) format('woff2');
+}
+@font-face {
+	font-family: OPPO-Sans-Medium;
+	font-weight: 500;
+	font-display: swap;
+	src: url(//static.mastergo.com/static/font/OPPOSans/OPPOSans-Medium.woff2) format('woff2');
+}
+@font-face {
+	font-family: hongmeng;
+	font-weight: 500;
+	font-display: swap;
+	src: url(//s1.hdslb.com/bfs/static/jinkela/long/font/regular.css;
+} */

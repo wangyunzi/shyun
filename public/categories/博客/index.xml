@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>博客 on 🌻</title>
+    <link>https://wangyunzi.com/categories/%E5%8D%9A%E5%AE%A2/</link>
+    <description>Recent content in 博客 on 🌻</description>
+    <image>
+      <url>https://wangyunzi.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://wangyunzi.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 22 Aug 2022 17:43:54 +0800</lastBuildDate><atom:link href="https://wangyunzi.com/categories/%E5%8D%9A%E5%AE%A2/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>折腾博客的尾声</title>
+      <link>https://wangyunzi.com/life/2022-08-22/</link>
+      <pubDate>Mon, 22 Aug 2022 17:43:54 +0800</pubDate>
+      
+      <guid>https://wangyunzi.com/life/2022-08-22/</guid>
+      <description>这几天十分纠结要不要买一个服务器给我的域名备案，但是自己并没有使用服务器的需求，其次是一个 服务器的价格真的贵的离谱，而且在阿里云购买服务器甚</description>
+    </item>
+    
+  </channel>
+</rss>

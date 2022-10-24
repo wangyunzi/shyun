@@ -1,0 +1,11 @@
+{
+  "devDependencies": {
+    "@waline/client": "^2.6.3"
+  },
+  "dependencies": {
+    "@waline/vercel": "^1.19.3"
+  },
+  "scripts": {
+    "netlify": "netlify"
+  }
+}

@@ -1,0 +1,177 @@
+{{- define "main" }}
+
+<article class="post-single">
+  <header class="post-header">
+    {{ partial "breadcrumbs.html" . }}
+    <h1 class="post-title">
+      <a href="{{ .Permalink }}">{{ .Title }}</a>
+      {{- if .Draft }}<sup><span class="entry-isdraft">&nbsp;&nbsp;[draft]</span></sup>{{- end }}
+    </h1>
+    {{- if .Description }}
+    <div class="post-description">
+      {{ .Description }}
+    </div>
+    {{- end }}
+    {{- if not (.Param "hideMeta") }}
+    <div class="post-meta">
+      {{- partial "post_meta.html" . -}}
+      <!--在头部显示可跳转的标签-->
+    &nbsp;|&nbsp;标签: &nbsp;
+    {{- if .Params.tags }}
+    <ul class="post-tags-meta">
+        {{- range $index, $value := ($.GetTerms "tags") }}
+        {{- if eq $index 0}}
+        <a href="{{ .Permalink }}">{{ .LinkTitle }}</a>
+        {{- else }}
+        <a href="{{ .Permalink }}">、{{ .LinkTitle }}</a>
+        {{- end }}
+        {{- end }}
+    </ul>
+    {{- end }}
+
+    <!--访问量-->
+    <!--也可以用twikoo评论带的访问方式，如下：-->
+    <!-- <span id="twikoo_visitors"></span>    -->
+    <!--如下是使用busuanzi的方式，记得引入busuanzi的js，如果在其他文件引入了，这里可以不用引入-->
+    <!-- <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span id="busuanzi_container_page_pv">
+        &nbsp;| 访问: <span id="busuanzi_value_page_pv"></span>
+    </span> -->
+
+    
+    <!--评论数-->
+    <!--根据twikoo提供的接口文档修改：https://twikoo.js.org/api.html-->
+    <!--要引入twikoo的js，.Site.Params.twikoo.version是我自己的写法，让版本在config.yml配置文件控制-->
+    <script src="https://cdn.staticfile.org/twikoo/{{ .Site.Params.twikoo.version }}/twikoo.all.min.js">
+    </script>
+    <script>
+        let url = document.documentURI
+        {{ $baseURL := .Site.BaseURL }}
+        let dnsUrl = {{ $baseURL }}
+        let urlSplit = url.split(dnsUrl)
+        let finalUrl = urlSplit[1]
+        if (finalUrl[0] !== '/') {
+            finalUrl = '/'+finalUrl
+        }
+        twikoo.getCommentsCount({
+            envId: {{ .Site.Params.twikoo.id }},
+            region: {{ .Site.Params.twikoo.region }},
+            urls: [
+                finalUrl,
+            ],
+            includeReply: true // 评论数是否包括回复，默认：false
+        }).then(function (res) {
+            let count = res[0].count
+            const obj = document.getElementById("comment_count");
+            obj.innerText = count
+            // 返回示例: [
+            //   { url: '/2020/10/post-1.html', count: 10 },
+            // ]
+        }).catch(function (err) {
+            // 发生错误
+            console.error(err);
+        });
+    </script>
+    &nbsp;| 评论: &nbsp; <span id="comment_count"></span>
+      {{- partial "translation_list.html" . -}}
+      {{- partial "edit_post.html" . -}}
+      {{- if (not .Site.Params.disableBuSuanZi) }}
+      &nbsp;| &nbsp;<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>&nbsp;Hits
+      {{- end}}
+    </div>
+    {{- end }}
+  </header>
+  {{- $isHidden := .Params.cover.hidden | default .Site.Params.cover.hiddenInSingle | default .Site.Params.cover.hidden }}
+  {{- partial "cover.html" (dict "cxt" . "IsHome" false "isHidden" $isHidden) }}
+  {{- if (.Param "ShowToc") }}
+  {{- partial "toc.html" . }}
+  {{- end }}
+
+ <!-- {{- if .Site.Params.googleAdSense }} -->
+ <!-- &lt;!&ndash; header-ad &ndash;&gt; -->
+ <!-- <ins class="adsbygoogle"
+      style="display:block"
+      data-ad-client="{{ .Site.Params.googleAdSense }}"
+      data-ad-slot="9161921641"
+      data-ad-format="auto"
+      data-full-width-responsive="true"></ins> -->
+ <!-- <script>
+   (adsbygoogle = window.adsbygoogle || []).push({});
+ </script> -->
+  <!-- {{ end -}} -->
+
+  {{- if .Content }}
+  <div class="post-content">
+    {{ partial "breadcrumb.html" . }}
+    {{- if and (.Site.Params.ShowReprinted) (not .Params.DisableReprinted) }}
+    <!-- <blockquote style="margin-top: 8px">
+      <p style="text-align:center;text-indent:0rem">
+        <a href="{{ .Permalink }}">本文</a>
+        首发于
+        <a href="{{ $.Site.BaseURL }}">{{ $.Site.Params.ProfileMode.Title }}</a>，
+        <a href="/disclaimer/">转载</a> 请注明
+        <a href="{{ .Permalink }}">来源</a>。
+      </p>
+    </blockquote> -->
+    {{ end -}}
+    {{- if not (.Param "disableAnchoredHeadings") }}
+    {{- partial "anchored_headings.html" .Content -}}
+    {{- else }}{{ .Content }}{{ end }}
+    <!-- <div class="post-remark">
+    </hr>
+      注：本作品采用<a rel="license" target="view_window" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议 </a>进行许可。
+    </div> -->
+
+  </div>
+  {{- end }}
+
+  <footer class="post-footer">
+    {{- if .Params.tags }}
+    <ul class="post-tags">
+      {{- range ($.GetTerms "tags") }}
+      <li><a href="{{ .Permalink }}"> 🏷 {{ .LinkTitle }}</a></li>
+      {{- end }}
+    </ul>
+    {{- end }}
+    {{- if (and .Site.Params.ShowShareButtons (ne .Params.disableShare true)) }}
+    {{- partial "share_icons.html" . -}}
+    {{- end }}
+    {{- if (.Param "ShowPostNavLinks") }}
+    {{- partial "post_nav_links.html" . }}
+    {{- end }}
+  </footer>
+
+  {{ if and (.Params.comments | default .Site.Params.enableComments) (eq hugo.Environment "production") }}
+    {{ if or (in .Site.Params.mainSections .Section) .Params.comments }}
+
+        {{ if not .Site.Params.autoLoadComments }}
+            <div class="load-comments">
+                <div id="load-comments">{{ i18n "loadComments" }}</div>
+            </div>  
+        {{  end }}
+        
+    {{ end }}
+{{ end }}  
+
+  {{ if not (eq .Params.Comments "false") }}
+        {{ partial "comments/twikoo.html" . }}
+    {{ end }}
+   
+  {{ if not (eq .Params.Comments "false") }}
+        {{ partial "comments/disqus.html" . }}
+    {{ end }}
+  
+  {{ if not (eq .Params.Comments "false") }}
+        {{ partial "comments/livere.html" . }}
+    {{ end }}
+
+  {{ if not (eq .Params.Comments "false") }}
+        {{ partial "comments/waline.html" . }}
+    {{ end }}
+  
+  {{ if not (eq .Params.Comments "false") }}
+        {{ partial "comments/artalk.html" . }}
+    {{ end }}
+</article>
+
+{{- end }}{{/* end main */}}

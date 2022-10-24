@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Hexo on 🌻</title>
+    <link>https://wangyunzi.com/tags/hexo/</link>
+    <description>Recent content in Hexo on 🌻</description>
+    <image>
+      <url>https://wangyunzi.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://wangyunzi.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 27 May 2022 15:36:35 +0000</lastBuildDate><atom:link href="https://wangyunzi.com/tags/hexo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>我的博客搭建历程——hexo</title>
+      <link>https://wangyunzi.com/life/2022-05-27/</link>
+      <pubDate>Fri, 27 May 2022 15:36:35 +0000</pubDate>
+      
+      <guid>https://wangyunzi.com/life/2022-05-27/</guid>
+      <description>hexo搭建博客学习经过只是作为自己的经验总结，并不作为教程使用，主要是将博客搭建在github上。里面包含自己搭建博客的一些踩的坑，虽然不是很全面，但是可以大概了解。</description>
+    </item>
+    
+    <item>
+      <title>我的博客搭建历程</title>
+      <link>https://wangyunzi.com/life/2022-05-27blog/</link>
+      <pubDate>Fri, 27 May 2022 14:00:56 +0000</pubDate>
+      
+      <guid>https://wangyunzi.com/life/2022-05-27blog/</guid>
+      <description>一个小白搭建博客的心理路程记录日记，想要记录下生活中的点点滴滴，想要继续下去，不断提升自我。</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,21 @@
+<!-- Artalk -->
+{{- if .Site.Params.artalk.enable -}}
+<div class="pagination__title">
+    <span class="pagination__title-h">💬欢迎评论</span>
+<hr />
+</div>
+<div id="Comments"></div>
+<link href="/lib/artalk/Artalk.css" rel="stylesheet">
+<script src="/lib/artalk/Artalk.js"></script>
+{{- end }}
+
+<script>
+  new Artalk({
+    el:        '#Comments',
+    pageKey:   '{{ .Permalink }}',
+    pageTitle: '{{ .Title }}',
+    server:    '{{ $.Site.Params.artalk.server }}',
+    site:      '{{ $.Site.Params.artalk.site }}',
+    // ...你的其他配置
+  })
+</script>
