@@ -1,4 +1,4 @@
-baseURL: https://wangyunzi.com
+baseURL: https://shyun.wangyunzi.com
 defaultContentLanguage: "zh" # en-us
 languageCode: zh-cn
 hasCJKLanguage: true # 设定网站有 CJK 字符（中日韩统一表意文字）
