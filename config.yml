@@ -14,7 +14,7 @@ buildDrafts: false
 buildFuture: false
 buildExpired: false
 
-googleAnalytics: G-DJCXPEYLMM
+# googleAnalytics: G-DJCXPEYLMM
 
 minify:
     disableXML: true
